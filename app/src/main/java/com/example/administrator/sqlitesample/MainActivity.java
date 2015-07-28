@@ -15,10 +15,11 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MyDBHelper myDBHelper = new MyDBHelper(this, "manage", 1);
+        //MyDBHelper myDBHelper = new MyDBHelper(this, "manage", 1);
+        MyDBHelper myDBHelper = new MyDBHelper(this, "manage", 2);
         SQLiteDatabase dbWriter = myDBHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put("name", "zhangyu");
+        cv.put("name", "wewq");
         cv.put("phone", "123456");
         dbWriter.insert("user", null, cv);
 
